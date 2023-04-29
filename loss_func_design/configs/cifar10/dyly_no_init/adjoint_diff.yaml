@@ -1,4 +1,4 @@
-# Dataset, either Cifar10/Cifar100/ImageNet/INAT
+# Dataset, either Cifar10/Cifar100/ImageNet
 dataset: Cifar10
 datapath: ~/data/
 device: cuda
