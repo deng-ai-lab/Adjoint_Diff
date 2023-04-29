@@ -1,0 +1,66 @@
+# Dataset
+dataset: Cifar100
+datapath: ~/data/
+device: cuda
+num_classes: 100
+# Log and result save path
+save_path: results/cifar100_noisy/adjoint_diff_momentum/
+checkpoint_interval: 30
+eval_interval: 1
+
+hg_method: adjoint_diff_momentum
+# The check point uses to resume the work
+checkpoint: 0
+model_file: ~
+
+num_meta_total: 1000
+corruption_type: uniform
+corruption_ratio: 0.6
+
+# Model optimization lr (lower level)
+low_lr: 0.1
+low_lr_schedule:
+  - 45
+  - 55
+# Lower level batch size
+low_batch_size: 128
+low_lr_warmup: 0
+epoch: 60
+
+# Hyper-parameter optimization lr and schedule (upper level)
+up_lr: 0.001
+up_lr_schedule:
+  - 60
+  - 60
+up_lr_warmup: 1
+# Upper level batch size
+up_train_batch_size: 128
+up_val_batch_size: 128
+
+enlar_step_number: 5
+# Upper level configs
+up_configs:
+  # Number of batches when computing hyper-gradient
+  train_batches: 1
+  val_batches: 1
+  # The upper optimization start and end epoch, 
+  end_epoch: 100
+  start_epoch: 10
+  # Interval of iterations/epochs when doing hyper update. 
+  # (It is mostly used to stabilize model training)z
+  iter_interval: 5
+  epoch_interval: 1
+  # Select which parameter can be optimized
+  dy: true
+  ly: true
+  wy: false
+  aug: false
+
+  # Any initialization applied to dy,ly,wy
+  ly_init: Zeros
+  dy_init: Ones
+  wy_init: Ones
+
+  # Parameters if use logit adjustment of CDT initialization
+  ly_LA_tau: ~
+  dy_CDT_gamma: ~
