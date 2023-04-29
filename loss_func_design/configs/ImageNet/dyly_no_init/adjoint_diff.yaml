@@ -1,4 +1,4 @@
-# Dataset, either Cifar10/Cifar100/ImageNet/INAT
+# Dataset, either Cifar10/Cifar100/ImageNet
 dataset: ImageNet
 datapath: "/home/dhk/code/hg_ode/data"
 device: cuda
