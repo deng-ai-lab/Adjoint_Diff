@@ -214,14 +214,14 @@ for i in range(args["checkpoint"], args["epoch"]+1):
     print('ly', ly, '\n dy', dy, '\n')
 
     if args["hg_method"]=='adjoint_diff':
-        train_epoch_adjoint_diff()(i, model, args,
+        train_epoch_adjoint_diff(i, model, args,
             low_loader=train_loader, low_criterion=loss_adjust_cross_entropy,
             low_optimizer=train_optimizer, low_params=[dy, ly, w_train],
             up_loader=val_loader, up_optimizer=val_optimizer,
             up_criterion=cross_entropy, up_params=[dy, ly, w_val])
         
     elif args['hg_method']=='adjoint_diff_momentum':
-        train_epoch_adjoint_diff_momentum()(i, model, args,
+        train_epoch_adjoint_diff_momentum(i, model, args,
                 low_loader=train_loader, low_criterion=loss_adjust_cross_entropy,
                 low_optimizer=train_optimizer, low_params=[dy, ly, w_train],
                 up_loader=val_loader, up_optimizer=val_optimizer,
