@@ -2,6 +2,11 @@
 ## The official Implementation of *High-dimensional Hyperparameter Optimization via Adjoint Differentiation*
 
 + Dependencies
+
+```
+pip install -r requirements.txt
+```
+
 + Design loss function for imbalance data
 
 ```
