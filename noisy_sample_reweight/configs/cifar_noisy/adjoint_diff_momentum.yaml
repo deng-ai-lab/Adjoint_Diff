@@ -51,8 +51,8 @@ up_configs:
   iter_interval: 5
   epoch_interval: 1
   # Select which parameter can be optimized
-  dy: true
-  ly: true
+  dy: false
+  ly: false
   wy: false
   aug: false
 
