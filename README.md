@@ -1,5 +1,5 @@
 # **Adjoint Diff**
-## The official Implementation of *High-dimensional Hyperparameter Optimization via Adjoint Differentiation* (accepted by IEEE Transactions on Artificial Intelligence). [IEEE Xplore link](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=9078688)
+## The official Implementation of *High-dimensional Hyperparameter Optimization via Adjoint Differentiation* (accepted by IEEE Transactions on Artificial Intelligence). [IEEE Xplore link](https://ieeexplore.ieee.org/document/10880096/authors#authors)
 
 + Dependencies
 
