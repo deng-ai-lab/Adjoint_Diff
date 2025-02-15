@@ -24,10 +24,10 @@ CUDA_VISIBLE_DEVICES=1 python noisy_sample_reweight/main.py --config configs/cif
 If you find this work useful for your research, please consider citing:
 
 ```bibtex
-@article{10880096,
+@article{dou2025high,
+  title={High-dimensional Hyperparameter Optimization via Adjoint Differentiation},
   author={Dou, Hongkun and Li, Hongjue and Du, Jinyang and Fang, Leyuan and Gao, Qing and Deng, Yue and Yao, Wen},
-  journal={IEEE Transactions on Artificial Intelligence}, 
-  title={High-dimensional Hyperparameter Optimization via Adjoint Differentiation}, 
+  journal={IEEE Transactions on Artificial Intelligence},
   year={2025},
-  pages={1-15},
-  doi={10.1109/TAI.2025.3540799}}
+  publisher={IEEE}
+}
